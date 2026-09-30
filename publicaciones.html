@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Publicaciones Científicas | Molecular Spectroscopy Lab | Dr. Leonardo Álvarez Valtierra</title>
+  <meta name="description" content="Catálogo completo de las 26 publicaciones científicas y artículos arbitrados del Dr. Leonardo Álvarez Valtierra en el Laboratorio de Espectroscopía Molecular de la Universidad de Guanajuato.">
+  <meta name="keywords" content="Publicaciones, Artículos Científicos, Leonardo Álvarez Valtierra, Molecular Spectroscopy, Universidad de Guanajuato, Journal of Chemical Physics, PCCP, J. Mol. Struct.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- =======================================================================
+       CABECERA Y NAVEGACIÓN
+       ======================================================================= -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      
+      <a href="index.html" class="brand" aria-label="Volver a Inicio">
+        <img 
+          src="https://dci.ugto.mx/~molspeclab/templates/universidaddeguanajuato/images/escudo-universidad-de-guanajuato.png" 
+          alt="Escudo Universidad de Guanajuato" 
+          class="brand-logo"
+          loading="eager"
+          width="52" 
+          height="52"
+        >
+        <div class="brand-text">
+          <span class="brand-name">Molecular Spectroscopy Lab</span>
+          <span class="brand-tagline">Universidad de Guanajuato · DCI</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" role="navigation" aria-label="Menú principal">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="index.html#team" class="nav-link">Nuestro Equipo</a>
+        <a href="laboratorio.html" class="nav-link">Laboratorio</a>
+        <a href="publicaciones.html" class="nav-link active">Publicaciones</a>
+        <a href="index.html#collaborators" class="nav-link">Colaboradores</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Switcher a Versión en Inglés -->
+        <a href="en/publications.html" class="lang-toggle-btn" title="Switch to English publications catalog">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span>English Version</span>
+        </a>
+
+        <a 
+          href="http://www.dci.ugto.mx/~molspeclab/images/images/pdf/cv_Leo_Alvarez-10-oct-24.pdf" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="btn btn-sm btn-outline"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="12" y1="18" x2="12" y2="12"></line>
+            <line x1="9" y1="15" x2="12" y2="18"></line>
+            <line x1="15" y1="15" x2="12" y2="18"></line>
+          </svg>
+          <span>CV</span>
+        </a>
+      </div>
+
+      <button 
+        type="button" 
+        class="mobile-toggle" 
+        id="mobileMenuToggle" 
+        aria-label="Abrir menú de navegación" 
+        aria-expanded="false" 
+        aria-controls="mobileNavDrawer"
+      >
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Menú Móvil -->
+  <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileNavDrawer" aria-label="Menú móvil">
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Inicio</a></li>
+        <li><a href="index.html#team" class="mobile-nav-link">Nuestro Equipo</a></li>
+        <li><a href="laboratorio.html" class="mobile-nav-link">Laboratorio (5 Ramificaciones)</a></li>
+        <li><a href="publicaciones.html" class="mobile-nav-link active">Publicaciones Científicas (26 Artículos)</a></li>
+        <li><a href="index.html#collaborators" class="mobile-nav-link">Colaboradores y Exalumnos</a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="en/publications.html" class="lang-toggle-btn" style="justify-content: center; width: 100%; padding: 0.7rem;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px;">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span>For English Page Click Here</span>
+      </a>
+      <a 
+        href="http://www.dci.ugto.mx/~molspeclab/images/images/pdf/cv_Leo_Alvarez-10-oct-24.pdf" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="btn btn-accent btn-sm"
+        style="width: 100%; justify-content: center; margin-top: 0.5rem;"
+      >
+        <span>Descargar CV Completo (PDF)</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- =======================================================================
+       CONTENIDO PRINCIPAL: CATÁLOGO COMPLETO DE PUBLICACIONES (26 ARTÍCULOS)
+       ======================================================================= -->
+  <main class="section" style="padding-top: 4rem;">
+    <div class="container">
+      
+      <!-- Encabezado de la Sección -->
+      <div class="section-header" style="margin-bottom: 2.5rem;">
+        <span class="section-badge">Repositorio Académico Oficial</span>
+        <h1 class="section-title" style="font-size: clamp(2rem, 3.5vw + 0.8rem, 2.75rem);">
+          Publicaciones Científicas
+        </h1>
+        <p class="section-subtitle">
+          Catálogo íntegro y actualizado de 26 artículos arbitrados publicados en revistas internacionales de alto impacto por el Dr. Leonardo Álvarez Valtierra y su red de colaboradores nacionales e internacionales.
+        </p>
+      </div>
+
+      <!-- Barra de Controles y Búsqueda en Tiempo Real -->
+      <div class="pub-page-controls">
+        <div>
+          <div style="font-weight: 700; color: var(--navy-900); font-size: 1.05rem;">Producción Científica Indexada (26 Artículos)</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">Filtrado instantáneo por título, autor, año o nombre de revista.</div>
+        </div>
+
+        <div class="pub-search-box">
+          <svg class="pub-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input 
+            type="search" 
+            id="pubSearchInput" 
+            class="pub-search-input" 
+            placeholder="Buscar por autor, título, año, revista..." 
+            aria-label="Buscar en catálogo de publicaciones"
+          >
+        </div>
+      </div>
+
+      <!-- Listado Cronológico de las 26 Publicaciones Oficiales -->
+      <div id="publicationsContainer">
+
+        <!-- ==================== AÑO 2020 ==================== -->
+        <h2 class="pub-year-header">Año 2020</h2>
+        
+        <article class="pub-item-card">
+          <div class="pub-item-num">[26] Journal of Molecular Structure</div>
+          <h3 class="pub-item-title">Structure and excited state dipole moments of oxygen containing heteroaromatics: 2,3-benzofuran</h3>
+          <p class="pub-item-authors">M.-L. Hebestreit, H. Lartian, M. Schneider, R. Kühnemuth, A. Y. Torres-Boy, S. Romero-Servin, J. A. Ruiz-Santoyo, <strong>L. Álvarez-Valtierra</strong>, W. L. Meerts, and M. Schmitt.</p>
+          <p class="pub-item-journal">J. Mol. Struct. 1210, 127992 (2020).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Hebestreit, M.-L., Lartian, H., Schneider, M., Kühnemuth, R., Torres-Boy, A. Y., Romero-Servin, S., Ruiz-Santoyo, J. A., Álvarez-Valtierra, L., Meerts, W. L., & Schmitt, M. (2020). Structure and excited state dipole moments of oxygen containing heteroaromatics: 2,3-benzofuran. J. Mol. Struct., 1210, 127992.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1016/j.molstruc.2020.127992" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[25] Materials Chemistry and Physics</div>
+          <h3 class="pub-item-title">Enhancing the photocatalyticdegradation of ciprofloxacin contaminant using a combined laser irradiation (285/365nm) and porous g-C3N4</h3>
+          <p class="pub-item-authors">J. Oliva, J. Sánchez, S. Romero-Servin, J. A. Ruiz-Santoyo, C. R. García, M. A. Vallejo, <strong>L. Álvarez-Valtierra</strong>, and C. Gomez-Solis.</p>
+          <p class="pub-item-journal">Mat. Chem. Phys. 252, 123198 (2020).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Oliva, J., Sánchez, J., Romero-Servin, S., Ruiz-Santoyo, J. A., García, C. R., Vallejo, M. A., Álvarez-Valtierra, L., & Gomez-Solis, C. (2020). Enhancing the photocatalyticdegradation of ciprofloxacin contaminant using a combined laser irradiation (285/365nm) and porous g-C3N4. Mat. Chem. Phys., 252, 123198.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1016/j.matchemphys.2020.123198" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[24] The Journal of Chemical Physics</div>
+          <h3 class="pub-item-title">Rotationally resolved UV spectroscopy of the rotamers of indole-4-carboxylic acid: Evidence for charge transfer quenching</h3>
+          <p class="pub-item-authors">J. T. Yi, S. Romero-Servin, <strong>L. Álvarez-Valtierra</strong>, and D. F. Plusquellic.</p>
+          <p class="pub-item-journal">J. Chem. Phys. 152, 144307 (2020).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Yi, J. T., Romero-Servin, S., Álvarez-Valtierra, L., & Plusquellic, D. F. (2020). Rotationally resolved UV spectroscopy of the rotamers of indole-4-carboxylic acid: Evidence for charge transfer quenching. J. Chem. Phys., 152, 144307.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1063/5.0004505" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[23] NANO: Brief Reports and Reviews</div>
+          <h3 class="pub-item-title">Enhancing the nonlinear optical properties of lithium tetraborate glass using rare earth elements and silver nanoparticles</h3>
+          <p class="pub-item-authors">M. A. Vallejo, S. Romero-Servin, M. Casillas-Alvarez, J. A. Elias-Angel, C. Gomez-Solis, <strong>L. Álvarez-Valtierra</strong>, and M. A. Sosa.</p>
+          <p class="pub-item-journal">NANO: Brief Reports and Reviews 15, 2050064 (2020).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Vallejo, M. A., Romero-Servin, S., Casillas-Alvarez, M., Elias-Angel, J. A., Gomez-Solis, C., Álvarez-Valtierra, L., & Sosa, M. A. (2020). Enhancing the nonlinear optical properties of lithium tetraborate glass using rare earth elements and silver nanoparticles. NANO: Brief Reports and Reviews, 15, 2050064.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1142/S179329202050064X" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[22] Journal of Molecular Structure</div>
+          <h3 class="pub-item-title">Rotationally resolved electronic spectrum of N-Methylcarbazole in the gas phase: A study of methyl internal rotation</h3>
+          <p class="pub-item-authors">J. A. Ruiz-Santoyo, A. Y. Torres-Boy, J. A. Minguela-Gallardo, J. T. Yi, S. A. Romero-Servin, D. W. Pratt, and <strong>L. Álvarez-Valtierra</strong>.</p>
+          <p class="pub-item-journal">J. Mol. Struct. 1217, 128282 (2020).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Ruiz-Santoyo, J. A., Torres-Boy, A. Y., Minguela-Gallardo, J. A., Yi, J. T., Romero-Servin, S. A., Pratt, D. W., & Álvarez-Valtierra, L. (2020). Rotationally resolved electronic spectrum of N-Methylcarbazole in the gas phase: A study of methyl internal rotation. J. Mol. Struct., 1217, 128282.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1016/j.molstruc.2020.128282" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ==================== AÑO 2018 ==================== -->
+        <h2 class="pub-year-header">Año 2018</h2>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[21] Physical Chemistry Chemical Physics</div>
+          <h3 class="pub-item-title">Rotationally resolved electronic spectroscopy of 3-cyanoindole and the 3-cyanoindole–water complex</h3>
+          <p class="pub-item-authors">M. Schneider, M.-L. Hebestreit, M. M. Lindic, H. Parsian, A. Y. Torres-Boy, <strong>L. Álvarez-Valtierra</strong>, W. L. Meerts, R. Kühnemuth, and M. Schmitt.</p>
+          <p class="pub-item-journal">Physical Chemistry Chemical Physics. 20, 23441 (2018).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Schneider, M., Hebestreit, M.-L., Lindic, M. M., Parsian, H., Torres-Boy, A. Y., Álvarez-Valtierra, L., Meerts, W. L., Kühnemuth, R., & Schmitt, M. (2018). Rotationally resolved electronic spectroscopy of 3-cyanoindole and the 3-cyanoindole–water complex. Phys. Chem. Chem. Phys., 20, 23441.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1039/C8CP03672A" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ==================== AÑO 2017 ==================== -->
+        <h2 class="pub-year-header">Año 2017</h2>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[20] Journal of Molecular Structure</div>
+          <h3 class="pub-item-title">Rotationally Resolved Electronic Spectroscopy study of the conformational space of 3-methoxyphenol</h3>
+          <p class="pub-item-authors">M. Wilke, M. Schneider, J. Wilke, J. A. Ruiz-Santoyo, J. J. Campos-Amador, M. E. González-Medina, <strong>L. Álvarez-Valtierra</strong>, and M. Schmitt.</p>
+          <p class="pub-item-journal">J. Mol. Struct. 1140, 59 (2017).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Wilke, M., Schneider, M., Wilke, J., Ruiz-Santoyo, J. A., Campos-Amador, J. J., González-Medina, M. E., Álvarez-Valtierra, L., & Schmitt, M. (2017). Rotationally Resolved Electronic Spectroscopy study of the conformational space of 3-methoxyphenol. J. Mol. Struct., 1140, 59.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1016/j.molstruc.2016.12.086" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[19] Physical Chemistry Chemical Physics</div>
+          <h3 class="pub-item-title">Rotationally Resolved Electronic Spectroscopy of Rotamers of 1,3-Dimethoxybenzene</h3>
+          <p class="pub-item-authors">M. Schneider, M. Wilke, M.-L. Hebestreit, J. T. Yi, J. A. Ruiz-Santoyo, <strong>L. Álvarez-Valtierra</strong>, W. L. Meerts, D. W. Pratt, and M. Schmitt.</p>
+          <p class="pub-item-journal">Phys. Chem. Chem. Phys. 19, 21364 (2017).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Schneider, M., Wilke, M., Hebestreit, M.-L., Yi, J. T., Ruiz-Santoyo, J. A., Álvarez-Valtierra, L., Meerts, W. L., Pratt, D. W., & Schmitt, M. (2017). Rotationally Resolved Electronic Spectroscopy of Rotamers of 1,3-Dimethoxybenzene. Phys. Chem. Chem. Phys., 19, 21364.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1039/C7CP03978F" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ==================== AÑO 2016 ==================== -->
+        <h2 class="pub-year-header">Año 2016</h2>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[18] The Journal of Chemical Physics</div>
+          <h3 class="pub-item-title">Electronic spectra of 2- and 3-tolunitrile in the gas phase. I. A study of methyl group internal rotation via rovibronically resolved spectroscopy</h3>
+          <p class="pub-item-authors">J. A. Ruiz-Santoyo, J. Wilke, M. Wilke, J. T. Yi, D. W. Pratt, M. Schmitt, and <strong>L. Álvarez-Valtierra</strong>.</p>
+          <p class="pub-item-journal">J. Chem. Phys. 144, 044303 (2016).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Ruiz-Santoyo, J. A., Wilke, J., Wilke, M., Yi, J. T., Pratt, D. W., Schmitt, M., & Álvarez-Valtierra, L. (2016). Electronic spectra of 2- and 3-tolunitrile in the gas phase. I. A study of methyl group internal rotation via rovibronically resolved spectroscopy. J. Chem. Phys., 144, 044303.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1063/1.4939798" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[17] The Journal of Chemical Physics</div>
+          <h3 class="pub-item-title">Electronic spectra of 2- and 3- tolunitrile in the gas phase. II. Geometry changes from Franck-Condon fits of fluorescence emission spectra</h3>
+          <p class="pub-item-authors">F. Gmerek, B. Stuhlmann, <strong>L. Álvarez-Valtierra</strong>, D. W. Pratt, and M. Schmitt.</p>
+          <p class="pub-item-journal">J. Chem. Phys. 144, 084304 (2016).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Gmerek, F., Stuhlmann, B., Álvarez-Valtierra, L., Pratt, D. W., & Schmitt, M. (2016). Electronic spectra of 2- and 3- tolunitrile in the gas phase. II. Geometry changes from Franck-Condon fits of fluorescence emission spectra. J. Chem. Phys., 144, 084304.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1063/1.4942025" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ==================== AÑO 2015 ==================== -->
+        <h2 class="pub-year-header">Año 2015</h2>
+        
+        <article class="pub-item-card">
+          <div class="pub-item-num">[16] Chemical Physics</div>
+          <h3 class="pub-item-title">Intramolecular structure and dynamics of mequinol and guaiacol in the gas phase: Rotationally resolved electronic spectra of their S1 states</h3>
+          <p class="pub-item-authors">J. A. Ruiz-Santoyo, M. Rodriguez-Matus, J. L. Cabellos, J. T. Yi, D. W. Pratt, M. Schmitt, G. Merino, and <strong>L. Álvarez-Valtierra</strong>.</p>
+          <p class="pub-item-journal">Chemical Physics 460, 9-16 (2015).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Ruiz-Santoyo, J. A., Rodriguez-Matus, M., Cabellos, J. L., Yi, J. T., Pratt, D. W., Schmitt, M., Merino, G., & Álvarez-Valtierra, L. (2015). Intramolecular structure and dynamics of mequinol and guaiacol in the gas phase: Rotationally resolved electronic spectra of their S1 states. Chemical Physics, 460, 9-16.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1016/j.chemphys.2015.06.012" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ==================== AÑO 2013 ==================== -->
+        <h2 class="pub-year-header">Año 2013</h2>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[15] Physical Chemistry Chemical Physics</div>
+          <h3 class="pub-item-title">Using high resolution electronic spectroscopy to probe the effects of ring twist on charge transfer in 2-phenylindole and N-phenylcarbazole</h3>
+          <p class="pub-item-authors">J. W. Young, V. Vaquero-Vara, J. T. Yi, D. W. Pratt, G. Moreno-Vargas and <strong>L. Álvarez-Valtierra</strong>.</p>
+          <p class="pub-item-journal">Physical Chemistry Chemical Physics. 15, 10251 (2013).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Young, J. W., Vaquero-Vara, V., Yi, J. T., Pratt, D. W., Moreno-Vargas, G., & Álvarez-Valtierra, L. (2013). Using high resolution electronic spectroscopy to probe the effects of ring twist on charge transfer in 2-phenylindole and N-phenylcarbazole. Phys. Chem. Chem. Phys., 15, 10251.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1039/C3CP50849H" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ==================== AÑO 2011 ==================== -->
+        <h2 class="pub-year-header">Año 2011</h2>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[14] Journal of Molecular Spectroscopy</div>
+          <h3 class="pub-item-title">Rotational spectroscopy of iodobenzene and iodobenzeneneon with a direct digital 2-8 GHz chirped-pulse Fourier transform microwave spectrometer</h3>
+          <p class="pub-item-authors">J. L. Neill, S. T. Shipman, <strong>L. Álvarez Valtierra</strong>, A. Lesarri, Z. Kisiel, B. H. Pate.</p>
+          <p class="pub-item-journal">J. Mol. Spectrosc. 269, 21 (2011).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Neill, J. L., Shipman, S. T., Álvarez Valtierra, L., Lesarri, A., Kisiel, Z., & Pate, B. H. (2011). Rotational spectroscopy of iodobenzene and iodobenzeneneon with a direct digital 2-8 GHz chirped-pulse Fourier transform microwave spectrometer. J. Mol. Spectrosc., 269, 21.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1016/j.jms.2011.04.016" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[13] Chemical Physics Letters</div>
+          <h3 class="pub-item-title">High resolution fluorescence excitation spectra of both enantiomers of naproxen in the gas phase. Are they equivalent or not?</h3>
+          <p class="pub-item-authors"><strong>L. Álvarez Valtierra</strong>, J. W. Young, and D. W. Pratt.</p>
+          <p class="pub-item-journal">Chem. Phys. Lett. 509, 96 (2011).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Álvarez Valtierra, L., Young, J. W., & Pratt, D. W. (2011). High resolution fluorescence excitation spectra of both enantiomers of naproxen in the gas phase. Are they equivalent or not? Chem. Phys. Lett., 509, 96.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1016/j.cplett.2011.04.083" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[12] The Journal of Physical Chemistry A</div>
+          <h3 class="pub-item-title">On the electronic excited state dynamics of vibronic transitions. High resolution electronic spectra of acenaphthene and its argon vdW complex in the gas phase</h3>
+          <p class="pub-item-authors"><strong>L. Álvarez Valtierra</strong>, D. F. Plusquellic, J. T. Yi, and D. W. Pratt.</p>
+          <p class="pub-item-journal">J. Phys. Chem. 115A, 9557 (2011).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Álvarez Valtierra, L., Plusquellic, D. F., Yi, J. T., & Pratt, D. W. (2011). On the electronic excited state dynamics of vibronic transitions. High resolution electronic spectra of acenaphthene and its argon vdW complex in the gas phase. J. Phys. Chem. A, 115A, 9557.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1021/jp2005435" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ==================== AÑO 2010 ==================== -->
+        <h2 class="pub-year-header">Año 2010</h2>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[11] Physical Chemistry Chemical Physics</div>
+          <h3 class="pub-item-title">High resolution electronic spectroscopy of 4-methylanisole in the gas phase. Barrier height determinations for the methyl group torsional motion</h3>
+          <p class="pub-item-authors">P. J. Morgan, <strong>L. Álvarez Valtierra</strong>, and D. W. Pratt.</p>
+          <p class="pub-item-journal">Phys. Chem. Chem. Phys. 12, 8323 (2010).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Morgan, P. J., Álvarez Valtierra, L., & Pratt, D. W. (2010). High resolution electronic spectroscopy of 4-methylanisole in the gas phase. Barrier height determinations for the methyl group torsional motion. Phys. Chem. Chem. Phys., 12, 8323.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1039/B925345F" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[10] The Journal of Physical Chemistry Letters</div>
+          <h3 class="pub-item-title">Stark-effect studies of 1-phenylpyrrole in the gas phase. Dipole reversal on electronic excitation</h3>
+          <p class="pub-item-authors">J. A. Thomas, J. Young, A. Fleisher, <strong>L. Álvarez Valtierra</strong>, and D. W. Pratt.</p>
+          <p class="pub-item-journal">J. Phys. Chem. Lett. 1, 2017 (2010).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Thomas, J. A., Young, J., Fleisher, A., Álvarez Valtierra, L., & Pratt, D. W. (2010). Stark-effect studies of 1-phenylpyrrole in the gas phase. Dipole reversal on electronic excitation. J. Phys. Chem. Lett., 1, 2017.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1021/jz100618m" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[09] Chemical Physics Letters</div>
+          <h3 class="pub-item-title">Re-examination of the rotationally resolved electronic origin and several vibronic bands of 1,3-benzodioxole</h3>
+          <p class="pub-item-authors">J. A. Thomas, <strong>L. Álvarez Valtierra</strong>, and D. W. Pratt.</p>
+          <p class="pub-item-journal">Chem. Phys. Lett. 490, 109 (2010).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Thomas, J. A., Álvarez Valtierra, L., & Pratt, D. W. (2010). Re-examination of the rotationally resolved electronic origin and several vibronic bands of 1,3-benzodioxole. Chem. Phys. Lett., 490, 109.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1016/j.cplett.2010.03.040" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ==================== AÑO 2009 ==================== -->
+        <h2 class="pub-year-header">Año 2009</h2>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[08] The Journal of Physical Chemistry A</div>
+          <h3 class="pub-item-title">High resolution electronic spectroscopy of o- and m-toluidines in the gas phase. Barrier height determinations for the methyl group torsional motions</h3>
+          <p class="pub-item-authors">P. J. Morgan, <strong>L. Álvarez Valtierra</strong>, and D. W. Pratt.</p>
+          <p class="pub-item-journal">J. Phys. Chem. 113A, 13221 (2009).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Morgan, P. J., Álvarez Valtierra, L., & Pratt, D. W. (2009). High resolution electronic spectroscopy of o- and m-toluidines in the gas phase. Barrier height determinations for the methyl group torsional motions. J. Phys. Chem. A, 113A, 13221.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1021/jp9045768" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[07] Journal of Molecular Spectroscopy</div>
+          <h3 class="pub-item-title">Assignment and analysis of the rotational spectrum of bromoform enabled by broadband FTMW spectroscopy</h3>
+          <p class="pub-item-authors">Z. Kisiel, A. Krasnicki, L. Pszczólkowski, S. T. Shipman, <strong>L. Álvarez Valtierra</strong>, and B. H. Pate.</p>
+          <p class="pub-item-journal">J. Mol. Spectrosc. 257, 177 (2009).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Kisiel, Z., Krasnicki, A., Pszczólkowski, L., Shipman, S. T., Álvarez Valtierra, L., & Pate, B. H. (2009). Assignment and analysis of the rotational spectrum of bromoform enabled by broadband FTMW spectroscopy. J. Mol. Spectrosc., 257, 177.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1016/j.jms.2009.07.010" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[06] The Journal of Physical Chemistry A</div>
+          <h3 class="pub-item-title">Lifetime broadening in the rotationally resolved electronic spectra of dibenzothiophene, 2,5-diphenylfuran and 2,5-diphenyl-1,3,4-oxadiazole in the gas phase. Intersystem crossing dynamics in the statistical limit</h3>
+          <p class="pub-item-authors"><strong>L. Álvarez Valtierra</strong>, J. T. Yi, and D. W. Pratt.</p>
+          <p class="pub-item-journal">J. Phys. Chem. 113A, 2261 (2009).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Álvarez Valtierra, L., Yi, J. T., & Pratt, D. W. (2009). Lifetime broadening in the rotationally resolved electronic spectra of dibenzothiophene, 2,5-diphenylfuran and 2,5-diphenyl-1,3,4-oxadiazole in the gas phase. Intersystem crossing dynamics in the statistical limit. J. Phys. Chem. A, 113A, 2261.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1021/jp8084687" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ==================== AÑO 2007 ==================== -->
+        <h2 class="pub-year-header">Año 2007</h2>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[05] The Journal of Physical Chemistry A</div>
+          <h3 class="pub-item-title">On the role of methyl torsional modes in the intersystem crossing dynamics of isolated molecules</h3>
+          <p class="pub-item-authors"><strong>L. Álvarez Valtierra</strong>, X. -Q. Tan, and D. W. Pratt.</p>
+          <p class="pub-item-journal">J. Phys. Chem. 111A, 12802 (2007).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Álvarez Valtierra, L., Tan, X. -Q., & Pratt, D. W. (2007). On the role of methyl torsional modes in the intersystem crossing dynamics of isolated molecules. J. Phys. Chem. A, 111A, 12802.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1021/jp073740+" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[04] The Journal of Chemical Physics</div>
+          <h3 class="pub-item-title">Rotationally resolved electronic spectra of 9,10-dihydrophenanthrene. A "floppy" molecule in the gas phase</h3>
+          <p class="pub-item-authors"><strong>L. Álvarez Valtierra</strong> and D. W. Pratt.</p>
+          <p class="pub-item-journal">J. Chem. Phys. 126, 224308 (2007).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Álvarez Valtierra, L., & Pratt, D. W. (2007). Rotationally resolved electronic spectra of 9,10-dihydrophenanthrene. A 'floppy' molecule in the gas phase. J. Chem. Phys., 126, 224308.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1063/1.2741530" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ==================== AÑO 2006 ==================== -->
+        <h2 class="pub-year-header">Año 2006</h2>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[03] The Journal of Physical Chemistry B</div>
+          <h3 class="pub-item-title">Rotationally resolved electronic spectra of 2- and 3-methylanisole in the gas phase: A study of methyl group internal rotation</h3>
+          <p class="pub-item-authors"><strong>L. Álvarez Valtierra</strong>, J. T. Yi, and D. W. Pratt.</p>
+          <p class="pub-item-journal">J. Phys. Chem. 110B, 19914 (2006).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Álvarez Valtierra, L., Yi, J. T., & Pratt, D. W. (2006). Rotationally resolved electronic spectra of 2- and 3-methylanisole in the gas phase: A study of methyl group internal rotation. J. Phys. Chem. B, 110B, 19914.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1021/jp063138b" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[02] The Journal of Chemical Physics</div>
+          <h3 class="pub-item-title">Rotationally resolved S1 &lt;-- S0 electronic spectra of fluorene, carbazole and dibenzofuran: Evidence for Herzberg-Teller coupling with the S2 state</h3>
+          <p class="pub-item-authors">J. T. Yi, <strong>L. Álvarez Valtierra</strong>, and D. W. Pratt.</p>
+          <p class="pub-item-journal">J. Chem. Phys. 124, 244302 (2006).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Yi, J. T., Álvarez Valtierra, L., & Pratt, D. W. (2006). Rotationally resolved S1 <-- S0 electronic spectra of fluorene, carbazole and dibenzofuran: Evidence for Herzberg-Teller coupling with the S2 state. J. Chem. Phys., 124, 244302.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1063/1.2201995" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ==================== AÑO 2000 ==================== -->
+        <h2 class="pub-year-header">Año 2000</h2>
+
+        <article class="pub-item-card">
+          <div class="pub-item-num">[01] Metal Based Drugs</div>
+          <h3 class="pub-item-title">A theoretical-experimental study on the structure and activity of certain quinolones and the interaction of their Cu(II)-complexes on a DNA model</h3>
+          <p class="pub-item-authors">J. Robles, J. Martín-Polo, <strong>L. Álvarez Valtierra</strong>, L. Hinojosa, and G. Mendoza-Diaz.</p>
+          <p class="pub-item-journal">Metal Based Drugs. 7, 301-311 (2000).</p>
+          <div class="pub-item-actions">
+            <button type="button" class="btn btn-sm btn-outline copy-citation-btn" data-citation="Robles, J., Martín-Polo, J., Álvarez Valtierra, L., Hinojosa, L., & Mendoza-Diaz, G. (2000). A theoretical-experimental study on the structure and activity of certain quinolones and the interaction of their Cu(II)-complexes on a DNA model. Metal Based Drugs, 7, 301-311.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Cita</span>
+            </button>
+            <a href="https://doi.org/10.1155/MBD.2000.301" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>DOI Link</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- =======================================================================
+       FOOTER INSTITUCIONAL
+       ======================================================================= -->
+  <footer class="site-footer" id="contact" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-row">
+            <img 
+              src="https://dci.ugto.mx/~molspeclab/templates/universidaddeguanajuato/images/escudo-universidad-de-guanajuato.png" 
+              alt="Universidad de Guanajuato" 
+              class="footer-logo"
+              loading="lazy"
+              width="48"
+              height="48"
+            >
+            <div>
+              <h3 class="footer-title">Molecular Spectroscopy Lab</h3>
+              <p style="font-size: 0.8rem; color: #94a3b8; margin: 0;">Universidad de Guanajuato</p>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Investigación científica de frontera en espectroscopía láser de alta resolución y dinámica molecular en fase gas.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio / Biografía</a></li>
+            <li><a href="index.html#team">Nuestro Equipo</a></li>
+            <li><a href="laboratorio.html">Laboratorio e Instalaciones</a></li>
+            <li><a href="publicaciones.html">Publicaciones Científicas</a></li>
+            <li><a href="index.html#collaborators">Colaboradores &amp; Exalumnos</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Contacto Institucional</h4>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Loma del Bosque No. 103, Col. Lomas del Campestre, C.P. 37150, León, Gto. México</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>leoav@ugto.mx / alvarez@fisica.ugto.mx</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Molecular Spectroscopy Lab · Dr. Leonardo Álvarez Valtierra. Universidad de Guanajuato.</div>
+        <div class="footer-bottom-links">
+          <a href="http://www.ugto.mx" target="_blank" rel="noopener noreferrer">Universidad de Guanajuato</a>
+          <span>·</span>
+          <a href="http://www.dci.ugto.mx" target="_blank" rel="noopener noreferrer">Campus León DCI</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

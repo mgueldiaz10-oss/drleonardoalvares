@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Laboratorio e Instalaciones | Molecular Spectroscopy Lab | Universidad de Guanajuato</title>
+  <meta name="description" content="Infraestructura especializada del Molecular Spectroscopy Lab: Laboratorio Láser de Alta Resolución, Máquina de Haces Moleculares, Cómputo Cuántico Molecular, Fotocatálisis y Técnico Académico.">
+  <meta name="keywords" content="Laboratorio Láser Alta Resolución, Máquina Haces Moleculares, Cómputo Cuántico, Fotocatálisis, Espectroscopía Molecular, Universidad de Guanajuato, Leonardo Álvarez Valtierra">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- =======================================================================
+       CABECERA Y NAVEGACIÓN STICKY
+       ======================================================================= -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      
+      <a href="index.html" class="brand" aria-label="Volver a Inicio">
+        <img 
+          src="https://dci.ugto.mx/~molspeclab/templates/universidaddeguanajuato/images/escudo-universidad-de-guanajuato.png" 
+          alt="Escudo Universidad de Guanajuato" 
+          class="brand-logo"
+          loading="eager"
+          width="52" 
+          height="52"
+        >
+        <div class="brand-text">
+          <span class="brand-name">Molecular Spectroscopy Lab</span>
+          <span class="brand-tagline">Universidad de Guanajuato · DCI</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" role="navigation" aria-label="Menú principal">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="index.html#team" class="nav-link">Nuestro Equipo</a>
+        <a href="laboratorio.html" class="nav-link active">Laboratorio</a>
+        <a href="publicaciones.html" class="nav-link">Publicaciones</a>
+        <a href="index.html#collaborators" class="nav-link">Colaboradores</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Switcher a Versión en Inglés -->
+        <a href="en/laboratory.html" class="lang-toggle-btn" title="Switch to English page">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span>English Version</span>
+        </a>
+
+        <a 
+          href="http://www.dci.ugto.mx/~molspeclab/images/images/pdf/cv_Leo_Alvarez-10-oct-24.pdf" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="btn btn-sm btn-outline"
+          aria-label="Descargar Curriculum Vitae en PDF"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="12" y1="18" x2="12" y2="12"></line>
+            <line x1="9" y1="15" x2="12" y2="18"></line>
+            <line x1="15" y1="15" x2="12" y2="18"></line>
+          </svg>
+          <span>CV</span>
+        </a>
+      </div>
+
+      <button 
+        type="button" 
+        class="mobile-toggle" 
+        id="mobileMenuToggle" 
+        aria-label="Abrir menú de navegación" 
+        aria-expanded="false" 
+        aria-controls="mobileNavDrawer"
+      >
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Menú Móvil Lateral (Drawer) -->
+  <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileNavDrawer" aria-label="Menú móvil">
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Inicio</a></li>
+        <li><a href="index.html#team" class="mobile-nav-link">Nuestro Equipo</a></li>
+        <li><a href="laboratorio.html" class="mobile-nav-link active">Laboratorio (5 Ramificaciones)</a></li>
+        <li><a href="publicaciones.html" class="mobile-nav-link">Publicaciones Científicas</a></li>
+        <li><a href="index.html#collaborators" class="mobile-nav-link">Colaboradores y Exalumnos</a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="en/laboratory.html" class="lang-toggle-btn" style="justify-content: center; width: 100%; padding: 0.7rem;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px;">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span>For English Page Click Here</span>
+      </a>
+      <a 
+        href="http://www.dci.ugto.mx/~molspeclab/images/images/pdf/cv_Leo_Alvarez-10-oct-24.pdf" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="btn btn-accent btn-sm"
+        style="width: 100%; justify-content: center; margin-top: 0.5rem;"
+      >
+        <span>Descargar CV Completo (PDF)</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- =======================================================================
+       CONTENIDO PRINCIPAL: 5 RAMIFICACIONES DEL LABORATORIO EN ESPAÑOL
+       ======================================================================= -->
+  <main class="section" style="padding-top: 4rem;">
+    <div class="container">
+      
+      <!-- Encabezado Principal de la Página -->
+      <div class="section-header" style="margin-bottom: 3.5rem;">
+        <span class="section-badge">Infraestructura &amp; Áreas Experimentales</span>
+        <h1 class="section-title" style="font-size: clamp(2rem, 3.5vw + 0.8rem, 2.75rem);">
+          Laboratorio e Instalaciones
+        </h1>
+        <p class="section-subtitle">
+          Estructura experimental y computacional de vanguardia, ramificada en cinco divisiones de investigación dedicadas a la espectroscopía de ultra-alta resolución, haces moleculares en expansión supersónica y fotocatálisis aplicada.
+        </p>
+      </div>
+
+      <!-- Layout de Ramificaciones (Sidebar Sticky + Contenido Completo) -->
+      <div class="lab-branch-layout">
+        
+        <!-- Sidebar de Navegación Rápida entre Ramificaciones -->
+        <aside class="lab-branch-sidebar" aria-label="Navegación de ramificaciones">
+          <div class="lab-branch-sidebar-title">Áreas del Laboratorio</div>
+          <a href="#laser-lab" class="lab-branch-nav-btn active">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line></svg>
+            <span>Láser de Alta Resolución</span>
+          </a>
+          <a href="#molecular-beam" class="lab-branch-nav-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            <span>Haces Moleculares</span>
+          </a>
+          <a href="#quantum-computing" class="lab-branch-nav-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+            <span>Cómputo Cuántico Molecular</span>
+          </a>
+          <a href="#photocatalysis" class="lab-branch-nav-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            <span>Fotocatálisis &amp; Degradación</span>
+          </a>
+          <a href="#technician" class="lab-branch-nav-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span>Técnico Académico</span>
+          </a>
+        </aside>
+
+        <!-- Área de Contenido con las 5 Ramificaciones Detalladas en Español -->
+        <div class="lab-branch-content-area">
+
+          <!-- ===================================================================
+               RAMA 1: LABORATORIO LÁSER DE ALTA RESOLUCIÓN
+               =================================================================== -->
+          <article class="lab-branch-pane" id="laser-lab">
+            <span class="branch-pane-badge">Ramificación 01 · Fuente de Radiación Coherente</span>
+            <h2 class="branch-pane-title">Laboratorio Láser de Alta Resolución (High Resolution Laser Lab)</h2>
+            
+            <p class="branch-pane-text">
+              La fuente de radiación lumínica para nuestro espectrómetro UV de ultra-alta resolución proviene directamente de este laboratorio. Aquí se encuentra instalado y configurado un conjunto especializado de cavidades láser acopladas, las cuales nos permiten generar fotones ultravioleta altamente monocromáticos con la máxima potencia óptica disponible (en función de la región espectral de trabajo y de la precisión en la alineación óptica del operador).
+            </p>
+
+            <div class="branch-image-gallery col-2">
+              <div class="branch-gallery-card">
+                <img src="https://dci.ugto.mx/~molspeclab/images/images/LAV-WEB/laserlab.jpg" alt="Mesa óptica y cavidades láser en el Laboratorio de Espectroscopía" loading="lazy">
+                <div class="branch-gallery-caption">Mesa óptica neumática y ensamblaje de cavidades láser de alta resolución</div>
+              </div>
+              <div class="branch-gallery-card">
+                <img src="https://dci.ugto.mx/~molspeclab/images/images/LAV-WEB/millennia.jpg" alt="Láser de bombeo Spectra Physics Millennia" loading="lazy">
+                <div class="branch-gallery-caption">Láser de bombeo de diodo Spectra Physics Millennia (5 W de salida a 532 nm)</div>
+              </div>
+            </div>
+
+            <p class="branch-pane-text">
+              Nuestra cavidad láser inicial es un láser de diodo de estado sólido <strong>Spectra Physics Millennia</strong>, configurado para proporcionar 5 W de potencia de salida en el segundo armónico (532 nm, luz verde). Este láser genera el haz de bombeo óptico hacia la cavidad láser subsiguiente: un sistema <strong>Spectra Physics Matisse DS</strong>.
+            </p>
+
+            <p class="branch-pane-text">
+              El <strong>Matisse DS</strong> es una cavidad de láser de colorante en anillo (*ring dye laser*). En ella, la radiación del Millennia excita una solución de colorante orgánico en circulación continua y a temperatura refrigerada, produciendo fluorescencia estimulada en un intervalo espectral específico. Esta cavidad posee sintonización digital de frecuencia, ajuste manual y optimización por computadora (sintonización fina), permitiendo barridos continuos en un intervalo de frecuencia sumamente estrecho (~1 cm⁻¹ en la región fundamental del visible). Esta precisión se logra gracias a un interferómetro Fabry-Pérot acoplado (estación de referencia activa) y a la óptica de ultra-alta reflectividad intracavitaria. El haz láser visible resultante presenta un ancho de línea extraordinariamente estrecho de apenas <strong>~250 kHz</strong>.
+            </p>
+
+            <div class="branch-image-gallery col-2">
+              <div class="branch-gallery-card">
+                <img src="https://dci.ugto.mx/~molspeclab/images/images/LAV-WEB/spectra.jpg" alt="Estación de referencia con interferómetro Fabry-Perot" loading="lazy">
+                <div class="branch-gallery-caption">Estación de referencia e interferómetro Fabry-Pérot para estabilización espectral</div>
+              </div>
+              <div class="branch-gallery-card">
+                <img src="https://dci.ugto.mx/~molspeclab/images/images/LAV-WEB/IMG_0239_2.JPG" alt="Cavidad láser de colorante en anillo Matisse DS" loading="lazy">
+                <div class="branch-gallery-caption">Cavidad resonante de colorante en anillo Spectra Physics Matisse DS</div>
+              </div>
+            </div>
+
+            <p class="branch-pane-text">
+              Posteriormente, este haz visible monocromático se divide y se dirige a un módulo resonador externo <strong>Spectra Physics Wavetrain</strong>. Mediante óptica no lineal y cristales de duplicación de frecuencia (*Second Harmonic Generation - SHG*), se genera el segundo armónico de la luz visible fundamental, produciendo radiación ultravioleta (UV) sintonizable y estrictamente monocromática, ideal para la interrogación espectroscópica rovibrónica.
+            </p>
+
+            <div class="branch-image-gallery">
+              <div class="branch-gallery-card">
+                <img src="https://dci.ugto.mx/~molspeclab/images/images/LAV-WEB/wavetrain_working.jpeg" alt="Módulo doblador Wavetrain SHG en operación" loading="lazy" style="height: 320px;">
+                <div class="branch-gallery-caption">Módulo de generación de segundo armónico Wavetrain (SHG) en operación experimental activa</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ===================================================================
+               RAMA 2: MÁQUINA DE HACES MOLECULARES
+               =================================================================== -->
+          <article class="lab-branch-pane" id="molecular-beam">
+            <span class="branch-pane-badge">Ramificación 02 · Física de Vacío &amp; Expansión Supersónica</span>
+            <h2 class="branch-pane-title">Máquina de Haces Moleculares (Molecular Beam Machine)</h2>
+
+            <p class="branch-pane-text">
+              La máquina de haces moleculares está constituida por una cámara de ultra-alto vacío diferencial fabricada en acero inoxidable. Se compone de tres cámaras de vacío ensambladas de manera consecutiva; cada una de ellas conectada a su correspondiente bomba de vacío por difusión de aceite. Las cámaras están interconectadas mediante orificios micrométricos rigurosamente calibrados, controlados de forma manual mediante válvulas mecánicas de alta precisión.
+            </p>
+
+            <div class="branch-image-gallery">
+              <div class="branch-gallery-card">
+                <img src="https://dci.ugto.mx/~molspeclab/images/images/LAV-WEB/1.jpg" alt="Cámara de vacío diferencial en acero inoxidable" loading="lazy" style="height: 380px;">
+                <div class="branch-gallery-caption">Cámara de ultra-alto vacío diferencial de tres etapas en acero inoxidable grado experimental</div>
+              </div>
+            </div>
+
+            <p class="branch-pane-text">
+              La primera cámara (cámara fuente), donde se aloja una tobera de cuarzo para sublimar o evaporar y generar la muestra molecular en fase gaseosa, alcanza un régimen de vacío de aproximadamente <strong>10⁻⁵ Torr</strong>. La segunda cámara (cámara intermedia o de amortiguamiento) alcanza niveles de <strong>10⁻⁶ Torr</strong>. Finalmente, la tercera cámara (cámara de investigación y detección) alcanza presiones basales de hasta <strong>10⁻⁷ Torr</strong>, empleando nitrógeno líquido como criofluido en trampas frías para optimizar drásticamente la condensación de residuales y el régimen de vacío molecular.
+            </p>
+
+            <div class="branch-image-gallery col-2">
+              <div class="branch-gallery-card">
+                <img src="https://dci.ugto.mx/~molspeclab/images/images/LAV-WEB/2.jpg" alt="Bombas de difusión con aceite de silicona" loading="lazy">
+                <div class="branch-gallery-caption">Ensamble de bombas de vacío por difusión con aceite de silicona sintético</div>
+              </div>
+              <div class="branch-gallery-card">
+                <img src="https://dci.ugto.mx/~molspeclab/images/images/LAV-WEB/2-b.jpg" alt="Líneas de vacío y válvulas micrométricas" loading="lazy">
+                <div class="branch-gallery-caption">Ductos de alto vacío, líneas criogénicas y válvulas mecánicas de paso</div>
+              </div>
+            </div>
+
+            <p class="branch-pane-text">
+              Cada una de las bombas de difusión opera con un aceite de silicona de ultra-baja presión de vapor, el cual se calienta mediante resistencias eléctricas especialmente adaptadas para generar un chorro de vapor laminar en su interior, que posteriormente se condensa mediante agua helada recirculada por un sistema de enfriamiento continuo (*chiller*).
+            </p>
+
+            <p class="branch-pane-text">
+              Todas las cámaras están enlazadas a través de un colector común a una máquina de vacío mecánico provista con un *booster* (bomba de lóbulos tipo Roots) para potenciar su capacidad de bombeo preliminar. Este sistema mecánico permite alcanzar presiones de desbaste de ~ <strong>10⁻² Torr</strong>, nivel inicial estrictamente requerido para poner en marcha de manera segura y eficiente las tres bombas de difusión.
+            </p>
+
+            <div class="branch-image-gallery col-2">
+              <div class="branch-gallery-card">
+                <img src="https://dci.ugto.mx/~molspeclab/images/images/LAV-WEB/3.jpg" alt="Bomba mecánica con booster para vacío preliminar" loading="lazy">
+                <div class="branch-gallery-caption">Bomba mecánica de paletas rotatorias acoplada a booster de desbaste</div>
+              </div>
+              <div class="branch-gallery-card">
+                <img src="https://dci.ugto.mx/~molspeclab/images/banners/2.jpg" alt="Zona de detección por fluorescencia inducida por láser" loading="lazy">
+                <div class="branch-gallery-caption">Región de interacción óptica entre el haz molecular libre de colisiones y el haz láser UV</div>
+              </div>
+            </div>
+
+            <p class="branch-pane-text">
+              Asimismo, la alineación micrométrica de la tobera de cuarzo desempeña un papel determinante en la obtención de señal espectroscópica; el orificio en la punta de la tobera debe colimarse concéntricamente frente al orificio de un *skimmer* cónico metálico, permitiendo que el haz supersónico se expanda en un régimen colisionalmente frío (&lt; 5 K rotacional) hacia la siguiente cámara. Finalmente, el haz molecular colimado es cruzado perpendicularmente por el haz láser UV para excitar los estados electrónicos de la molécula y registrar su fluorescencia inducida (*LIF*).
+            </p>
+          </article>
+
+          <!-- ===================================================================
+               RAMA 3: CÓMPUTO CUÁNTICO MOLECULAR
+               =================================================================== -->
+          <article class="lab-branch-pane" id="quantum-computing">
+            <span class="branch-pane-badge">Ramificación 03 · Simulación Teórica &amp; Mecánica Cuántica</span>
+            <h2 class="branch-pane-title">Cómputo Cuántico Molecular (Molecular Quantum Computing)</h2>
+
+            <p class="branch-pane-text">
+              El laboratorio de cómputo cuántico molecular es una unidad de modelado y simulación computacional avanzada que nos permite construir, caracterizar y evaluar termodinámicamente las moléculas y cúmulos (*clusters*) moleculares analizados experimentalmente en nuestro laboratorio.
+            </p>
+
+            <p class="branch-pane-text">
+              Una vez ensambladas computacionalmente las arquitecturas moleculares, se procede a su optimización geométrica integral (minimizando la superficie de energía potencial) respecto a todas sus coordenadas internas: longitudes de enlace, ángulos de enlace, ángulos diedros de torsión e interacciones intermoleculares no covalentes. Para lograr esto, se llevan a cabo cálculos de química cuántica tanto en suites computacionales comerciales reconocidas (<strong>Gaussian 16</strong>) como en códigos y herramientas analíticas desarrolladas en nuestro propio grupo (<strong>Deamon</strong>).
+            </p>
+
+            <div class="branch-image-gallery">
+              <div class="branch-gallery-card">
+                <img src="https://dci.ugto.mx/~molspeclab/images/banners/1.jpg" alt="Clúster de cómputo y modelado espectroscópico molecular" loading="lazy" style="height: 320px;">
+                <div class="branch-gallery-caption">Estaciones de cálculo de alto rendimiento para modelado DFT y ajuste de Hamiltonianos rotacionales (JB95 / ASYM40)</div>
+              </div>
+            </div>
+
+            <p class="branch-pane-text">
+              En este entorno de modelado, el investigador selecciona un nivel de teoría mecanocuántico apropiado (métodos ab initio como MP2 o funcionales de densidad DFT/TD-DFT) junto con bases de funciones gaussianas correlacionadas, capaces de estimar con alta fidelidad las constantes inerciales y rotacionales ($A, B, C$). Estos valores teóricos sirven como punto de partida indispensable para construir los Hamiltonianos de rotor rígido o pseudorrígido, permitiendo asignar e interpretar unívocamente las transiciones espectrales rotacionales resueltas en los estados electrónicos $S_0$ y $S_1$.
+            </p>
+
+            <p class="branch-pane-text">
+              Más allá de la estimación de constantes inerciales, los cálculos cuánticos proporcionan información molecular de vital importancia para elucidar la absorción de un fotón UV por el sistema: frecuencias armónicas y anarmónicas de vibración, grupo de simetría puntual, actividad infrarroja y Raman, energías y momentos de transición a estados excitados, distribución de cargas atómicas, componentes del tensor de momento dipolar, densidades orbitales de frontera y parámetros termoquímicos.
+            </p>
+
+            <p class="branch-pane-text">
+              Adicionalmente, esta infraestructura computacional se aprovecha de manera sinérgica en las investigaciones de fotocatálisis, prediciendo los modos normales de vibración de reactivos y elucidando a lo largo de coordenadas de reacción específicas (modos de baja frecuencia) la mejor vía para promover excitación vibrónica selectiva con nuestro sistema láser UV.
+            </p>
+          </article>
+
+          <!-- ===================================================================
+               RAMA 4: FOTOCATÁLISIS Y TÉCNICAS DE FOTODEGRADACIÓN
+               =================================================================== -->
+          <article class="lab-branch-pane" id="photocatalysis">
+            <span class="branch-pane-badge">Ramificación 04 · Fotoquímica Aplicada &amp; Remediación Ambiental</span>
+            <h2 class="branch-pane-title">Técnicas de Fotocatálisis y Fotodegradación (Photocatalysis)</h2>
+
+            <p class="branch-pane-text">
+              En esta división experimental, se aprovecha directamente la interacción fundamental entre la luz coherente y la materia para resolver problemas ambientales críticos mediante procesos de oxidación avanzada y fotocatálisis heterogénea. La investigación se enfoca en la degradación eficiente y eliminación de contaminantes orgánicos persistentes, fármacos emergentes (como la ciprofloxacina), microcontaminantes y colorantes industriales tóxicos.
+            </p>
+
+            <div class="branch-image-gallery col-2">
+              <div class="branch-gallery-card">
+                <img src="https://dci.ugto.mx/~molspeclab/images/images/LAV-WEB/IMG_5639.jpg" alt="Reactor fotoquímico e instrumentación de irradiación láser controlada" loading="lazy">
+                <div class="branch-gallery-caption">Reactor fotoquímico instrumentalizado con fuentes de excitación láser y UV reguladas</div>
+              </div>
+              <div class="branch-gallery-card">
+                <img src="https://dci.ugto.mx/~molspeclab/images/images/LAV-WEB/IMG_5642.jpg" alt="Banco analítico para monitoreo de cinética fotocatalítica" loading="lazy">
+                <div class="branch-gallery-caption">Banco de monitoreo cinético y espectrofotometría para determinación de tasas de degradación</div>
+              </div>
+            </div>
+
+            <p class="branch-pane-text">
+              El proceso emplea semiconductores sintetizados a medida (como nanoestructuras porosas de nitruro de carbono grafítico $g\text{-C}_3\text{N}_4$ y vidrios de tetraborato de litio dopados con tierras raras y nanopartículas de plata) activados bajo regímenes combinados de radiación UV y láser (por ejemplo a 285 nm y 365 nm).
+            </p>
+
+            <p class="branch-pane-text">
+              La cinética de fotodegradación se monitorea en tiempo real mediante técnicas espectrofotométricas de absorción UV-Vis y fluorescencia inducida. Al vincular los perfiles experimentales de degradación con el modelado mecanocuántico de los modos vibracionales del contaminante, se determinan las vías de ruptura de enlaces más favorables energéticamente, contribuyendo al desarrollo de tecnologías limpias de purificación hídrica y remediación ambiental.
+            </p>
+          </article>
+
+          <!-- ===================================================================
+               RAMA 5: TÉCNICO ACADÉMICO (DR. EDUARDO MONTES RAMÍREZ)
+               =================================================================== -->
+          <article class="lab-branch-pane" id="technician">
+            <span class="branch-pane-badge">Ramificación 05 · Personal Técnico Académico</span>
+            <h2 class="branch-pane-title">Técnico Académico Profesional (Lab Technician)</h2>
+
+            <!-- Ficha Formal Institucional del Dr. Eduardo Montes Ramírez -->
+            <div class="technician-profile-card">
+              <div class="technician-photo-wrapper">
+                <img 
+                  src="https://dci.ugto.mx/~molspeclab/images/images/montes.jpeg" 
+                  alt="Dr. Eduardo Montes Ramírez - Técnico Académico Profesional A" 
+                  class="technician-photo"
+                  loading="lazy"
+                >
+              </div>
+
+              <div>
+                <h3 style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--navy-900); margin-bottom: 0.5rem;">
+                  Dr. Eduardo Montes Ramírez
+                </h3>
+                <div style="font-weight: 700; color: var(--gold-accent); font-size: 0.95rem; margin-bottom: 1.25rem;">
+                  Técnico Académico Profesional A · SNI Nivel I
+                </div>
+
+                <ul class="technician-info-list">
+                  <li class="technician-info-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px; color: var(--blue-accent);"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span><strong>Categoría Institucional:</strong> Técnico Académico Profesional A</span>
+                  </li>
+                  <li class="technician-info-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px; color: var(--blue-accent);"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span><strong>Sistema Nacional de Investigadoras e Investigadores:</strong> SNI Nivel I</span>
+                  </li>
+                  <li class="technician-info-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px; color: var(--blue-accent);"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span><strong>Producción Científica:</strong> Más de 25 publicaciones internacionales arbitradas (&gt;230 citas)</span>
+                  </li>
+                  <li class="technician-info-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px; color: var(--blue-accent);"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span><strong>Formación de Recursos Humanos:</strong> 2 tesis de Licenciatura, 2 de Maestría y 1 de Doctorado</span>
+                  </li>
+                  <li class="technician-info-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px; color: var(--blue-accent);"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <span><strong>Correo Electrónico Institucional:</strong> <a href="mailto:montes.e@ugto.mx">montes.e@ugto.mx</a></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Semblanza Biográfica y Trayectoria Profesional -->
+            <p class="branch-pane-text">
+              Graduado por la Escuela Superior de Ingeniería Mecánica y Eléctrica del Instituto Politécnico Nacional (ESIME-IPN), en la Ciudad de México en 2005 como <strong>Ingeniero en Robótica Industrial</strong>. Se desempeñó durante cuatro años como ingeniero de producto en la industria de manufactura de sistemas HVAC. Posteriormente, realizó sus estudios de posgrado en el Centro de Investigación en Ciencia Aplicada y Tecnología Avanzada (CICATA-IPN), obteniendo el grado de Maestro en Tecnología Avanzada en 2011 y de Doctor en Tecnología Avanzada en 2015, ambos con <em>Mención Honorífica</em>. Durante este periodo, su investigación se focalizó en la síntesis, caracterización espectroscópica y aplicación de fósforos basados en óxidos metálicos dopados con elementos de tierras raras.
+            </p>
+
+            <p class="branch-pane-text">
+              Llevó a cabo estancias posdoctorales de excelencia en la <strong>Universidad Autónoma de Madrid</strong>, España (2017) y en el <strong>Centro de Investigaciones en Óptica (CIO)</strong> en León, Gto. (2018), centrando sus aportaciones en fósforos para aplicaciones biomédicas y en el diseño e implementación de instrumentación óptica y optoelectrónica para medición fotofísica. En 2020 se incorporó como profesor a la División de Ciencias e Ingenierías de la Universidad de Guanajuato, asumiendo en 2023 el cargo de Técnico Académico Profesional a cargo de los laboratorios de Espectroscopía Ultrafina y Fotocatálisis de la DCI-UG.
+            </p>
+
+            <p class="branch-pane-text">
+              Fue galardonado con el <strong>Premio a la Investigación 2012</strong> en la categoría de Investigación Básica por el Instituto Politécnico Nacional. Es miembro activo del Sistema Nacional de Investigadoras e Investigadores (SNI) desde 2017, ostentando actualmente la distinción de Investigador Nacional <strong>Nivel I</strong>. En la DCI-UG ha co-dirigido proyectos científicos respaldados por la DAIP-UG, participando activamente en la asesoría de estudiantes de licenciatura y posgrado, y cuenta con un sólido historial de más de 25 artículos internacionales en revistas indexadas en JCR y más de 230 citas registradas.
+            </p>
+          </article>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- =======================================================================
+       FOOTER INSTITUCIONAL
+       ======================================================================= -->
+  <footer class="site-footer" id="contact" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-row">
+            <img 
+              src="https://dci.ugto.mx/~molspeclab/templates/universidaddeguanajuato/images/escudo-universidad-de-guanajuato.png" 
+              alt="Universidad de Guanajuato" 
+              class="footer-logo"
+              loading="lazy"
+              width="48"
+              height="48"
+            >
+            <div>
+              <h3 class="footer-title">Molecular Spectroscopy Lab</h3>
+              <p style="font-size: 0.8rem; color: #94a3b8; margin: 0;">Universidad de Guanajuato</p>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Instalaciones experimentales de alta resolución y cómputo cuántico en la División de Ciencias e Ingenierías, Campus León.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio / Biografía</a></li>
+            <li><a href="index.html#team">Nuestro Equipo</a></li>
+            <li><a href="laboratorio.html">Laboratorio e Instalaciones</a></li>
+            <li><a href="publicaciones.html">Publicaciones Científicas</a></li>
+            <li><a href="index.html#collaborators">Colaboradores &amp; Exalumnos</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Contacto Institucional</h4>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Loma del Bosque No. 103, Col. Lomas del Campestre, C.P. 37150, León, Gto. México</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>leoav@ugto.mx / alvarez@fisica.ugto.mx</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Molecular Spectroscopy Lab · Dr. Leonardo Álvarez Valtierra. Universidad de Guanajuato.</div>
+        <div class="footer-bottom-links">
+          <a href="http://www.ugto.mx" target="_blank" rel="noopener noreferrer">Universidad de Guanajuato</a>
+          <span>·</span>
+          <a href="http://www.dci.ugto.mx" target="_blank" rel="noopener noreferrer">Campus León DCI</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón Volver Arriba -->
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </a>
+
+  <!-- Script Principal -->
+  <script src="js/main.js"></script>
+</body>
+</html>
