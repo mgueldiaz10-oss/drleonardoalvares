@@ -59,6 +59,9 @@ magical-lovelace/
 │   ├── laboratory.html      # Dedicated Laboratory page (5 branches with verbatim text)
 │   └── publications.html    # Dedicated Publications repository (all 26 papers)
 │
+├── favicon.svg              # Favicon vectorial en alta resolución (Láser y orbitales moleculares)
+├── favicon.png              # Favicon institucional (Escudo Universidad de Guanajuato)
+│
 ├── css/
 │   └── styles.css           # Estilos completos, grid, flexbox, variables y responsive
 │
@@ -88,7 +91,7 @@ magical-lovelace/
 Abre cualquiera de los siguientes archivos directamente en tu navegador web preferido:
 - [Página Principal en Español](file:///c:/Users/madia/Documents/antigravity/magical-lovelace/index.html)
 - [Página de Laboratorio (5 Ramificaciones)](file:///c:/Users/madia/Documents/antigravity/magical-lovelace/laboratorio.html)
-- [Catálogo de Publicaciones (16 Artículos)](file:///c:/Users/madia/Documents/antigravity/magical-lovelace/publicaciones.html)
+- [Catálogo de Publicaciones (26 Artículos)](file:///c:/Users/madia/Documents/antigravity/magical-lovelace/publicaciones.html)
 - [Home Page en Inglés (en/index.html)](file:///c:/Users/madia/Documents/antigravity/magical-lovelace/en/index.html)
 - [Laboratory Branches en Inglés (en/laboratory.html)](file:///c:/Users/madia/Documents/antigravity/magical-lovelace/en/laboratory.html)
 - [Publications Catalog en Inglés (en/publications.html)](file:///c:/Users/madia/Documents/antigravity/magical-lovelace/en/publications.html)
