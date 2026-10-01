@@ -128,15 +128,16 @@ function initSectionObserver() {
 }
 
 /* --------------------------------------------------------------------------
-   4. Laboratory Branch Navigation (laboratorio.html)
+   4. Laboratory Facilities & Areas Navigation (laboratorio.html)
    -------------------------------------------------------------------------- */
 function initLabBranchNavigation() {
   const branchBtns = document.querySelectorAll('.lab-branch-nav-btn');
   const branchPanes = document.querySelectorAll('.lab-branch-pane');
+  const sidebar = document.getElementById('labSidebar') || document.querySelector('.lab-branch-sidebar');
 
   if (!branchBtns.length || !branchPanes.length) return;
 
-  // Handle click on sidebar buttons
+  // Handle click on sidebar buttons with sticky header offset
   branchBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       const targetId = btn.getAttribute('href');
@@ -144,7 +145,14 @@ function initLabBranchNavigation() {
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
           e.preventDefault();
-          targetElement.scrollIntoView({ behavior: 'smooth' });
+          const headerOffset = 90;
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
           history.pushState(null, '', targetId);
           updateActiveBranchBtn(targetId.substring(1));
         }
@@ -163,7 +171,7 @@ function initLabBranchNavigation() {
     });
   }
 
-  // ScrollSpy for branch panes
+  // ScrollSpy for laboratory area panes
   if ('IntersectionObserver' in window) {
     const branchObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -172,11 +180,44 @@ function initLabBranchNavigation() {
         }
       });
     }, {
-      rootMargin: '-10% 0px -60% 0px',
+      rootMargin: '-15% 0px -55% 0px',
       threshold: 0
     });
 
     branchPanes.forEach(pane => branchObserver.observe(pane));
+  }
+
+  // Mobile docking interaction on scroll:
+  // Initial landing has the full menu in document flow.
+  // Scrolling down folds the menu into a sleek interactive icon rail on the right edge.
+  if (sidebar) {
+    let isDocked = false;
+
+    const handleMobileDock = () => {
+      if (window.innerWidth < 992) {
+        const threshold = 280;
+        if (window.scrollY > threshold) {
+          if (!isDocked) {
+            sidebar.classList.add('docked-mobile');
+            isDocked = true;
+          }
+        } else {
+          if (isDocked) {
+            sidebar.classList.remove('docked-mobile');
+            isDocked = false;
+          }
+        }
+      } else {
+        if (isDocked) {
+          sidebar.classList.remove('docked-mobile');
+          isDocked = false;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleMobileDock, { passive: true });
+    window.addEventListener('resize', handleMobileDock, { passive: true });
+    handleMobileDock();
   }
 }
 

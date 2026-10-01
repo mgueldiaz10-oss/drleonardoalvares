@@ -967,14 +967,13 @@ p:last-child {
 }
 
 .team-image-caption-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(180deg, rgba(10, 25, 47, 0) 0%, rgba(10, 25, 47, 0.85) 100%);
-  padding: 2rem 1.5rem 1rem 1.5rem;
+  position: relative;
+  width: 100%;
+  background: var(--navy-900);
+  border-top: 2px solid var(--gold-accent);
+  padding: 0.9rem 1.75rem;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 0.75rem;
@@ -1181,7 +1180,7 @@ p:last-child {
 }
 
 /* --------------------------------------------------------------------------
-   10. Laboratory Branching Layout (Página laboratorio.html con Ramificaciones)
+   10. Laboratory Facilities Layout (Página laboratorio.html con Áreas)
    -------------------------------------------------------------------------- */
 .lab-branch-layout {
   display: grid;
@@ -1197,7 +1196,7 @@ p:last-child {
   }
 }
 
-/* Sticky Branch Sidebar / Selector */
+/* Sticky Branch Sidebar / Selector for Desktop */
 .lab-branch-sidebar {
   position: sticky;
   top: calc(var(--header-height) + 24px);
@@ -1211,83 +1210,175 @@ p:last-child {
   gap: 0.5rem;
 }
 
-/* MOBILE FIX FOR LAB SIDEBAR:
-   On mobile (< 992px), docked as a sleek floating vertical icon rail pinned
-   directly to the right edge of the screen, completely clearing the center
-   so the entire article text is 100% visible and unhindered. */
+/* MOBILE RESPONSIVE BEHAVIOR (< 992px):
+   - At top of page: Displayed as a full card in document flow with complete text labels & comfortable icons.
+   - When scrolled down: Smoothly folds into a fixed vertical interactive guide on the right edge (.docked-mobile),
+     hiding text labels and displaying enlarged, touch-friendly 48px/24px icons with gold accents. */
 @media (max-width: 991px) {
   .lab-branch-sidebar {
-    position: fixed;
-    right: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 950;
-    background: rgba(10, 25, 47, 0.94);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: var(--radius-full);
-    padding: 0.5rem 0.35rem;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+    position: relative;
+    top: auto;
+    width: 100%;
+    margin-bottom: 2rem;
+    background-color: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem 1rem;
+    box-shadow: var(--shadow-sm);
     display: flex;
     flex-direction: column;
-    gap: 0.45rem;
-    width: auto;
-    max-width: none;
+    gap: 0.6rem;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .lab-branch-sidebar-title {
-    display: none;
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--navy-900);
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border-light);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
   .lab-branch-nav-btn {
-    width: 38px;
-    height: 38px;
-    padding: 0;
-    border-radius: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background: transparent;
-    color: #cbd5e1;
-    border: 1px solid transparent;
-    position: relative;
+    gap: 0.85rem;
+    width: 100%;
+    padding: 0.85rem 1.1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--navy-900);
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-light);
     transition: all var(--transition-fast);
   }
 
   .lab-branch-nav-btn span {
-    display: none;
+    display: inline-block;
   }
 
   .lab-branch-nav-btn svg {
-    width: 18px;
-    height: 18px;
-    color: #cbd5e1;
+    width: 22px;
+    height: 22px;
+    color: var(--navy-700);
+    flex-shrink: 0;
   }
 
   .lab-branch-nav-btn:hover {
-    background: rgba(255, 255, 255, 0.15);
-    color: #ffffff;
-  }
-
-  .lab-branch-nav-btn:hover svg {
-    color: #ffffff;
+    background-color: var(--bg-tertiary);
+    color: var(--navy-950);
   }
 
   .lab-branch-nav-btn.active {
-    background: var(--navy-800);
-    border-color: var(--gold-accent);
+    background-color: var(--navy-900);
     color: #ffffff;
-    box-shadow: 0 0 0 2px rgba(194, 142, 43, 0.4);
+    border-color: var(--navy-900);
+    box-shadow: var(--shadow-sm);
   }
 
   .lab-branch-nav-btn.active svg {
     color: var(--gold-accent);
   }
 
-  /* Right padding on mobile content area so text is never obstructed by the edge dock */
+  .lab-branch-nav-btn.active span {
+    color: #ffffff;
+  }
+
+  /* FOLDED & DOCKED STATE ON SCROLL */
+  .lab-branch-sidebar.docked-mobile {
+    position: fixed;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 950;
+    width: auto;
+    max-width: none;
+    margin-bottom: 0;
+    background: rgba(10, 25, 47, 0.95);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-full);
+    padding: 0.65rem 0.4rem;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    animation: foldDockIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes foldDockIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%) translateX(35px) scale(0.88);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(-50%) translateX(0) scale(1);
+    }
+  }
+
+  .lab-branch-sidebar.docked-mobile .lab-branch-sidebar-title {
+    display: none;
+  }
+
+  .lab-branch-sidebar.docked-mobile .lab-branch-nav-btn {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1.5px solid transparent;
+    color: #cbd5e1;
+    box-shadow: none;
+    transition: all var(--transition-fast);
+  }
+
+  .lab-branch-sidebar.docked-mobile .lab-branch-nav-btn span {
+    display: none;
+  }
+
+  .lab-branch-sidebar.docked-mobile .lab-branch-nav-btn svg {
+    width: 24px;
+    height: 24px;
+    color: #cbd5e1;
+    transition: transform var(--transition-fast), color var(--transition-fast);
+  }
+
+  .lab-branch-sidebar.docked-mobile .lab-branch-nav-btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+  }
+
+  .lab-branch-sidebar.docked-mobile .lab-branch-nav-btn:hover svg {
+    color: #ffffff;
+    transform: scale(1.1);
+  }
+
+  .lab-branch-sidebar.docked-mobile .lab-branch-nav-btn.active {
+    background: var(--navy-800);
+    border-color: var(--gold-accent);
+    color: #ffffff;
+    box-shadow: 0 0 14px rgba(194, 142, 43, 0.6);
+  }
+
+  .lab-branch-sidebar.docked-mobile .lab-branch-nav-btn.active svg {
+    color: var(--gold-accent);
+    transform: scale(1.1);
+  }
+
+  /* Padding on mobile content area so text is never obstructed by the edge dock */
   .lab-branch-content-area {
-    padding-right: 28px;
+    padding-right: 32px;
   }
 }
 
