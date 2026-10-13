@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLabBranchNavigation();
   initBackToTop();
   initImageFallbackHandler();
+  initTeamCarousel();
 });
 
 /* --------------------------------------------------------------------------
@@ -356,3 +357,161 @@ function initImageFallbackHandler() {
     });
   });
 }
+
+/* --------------------------------------------------------------------------
+   9. Team Photo Interchange Carousel (6-Second Interval)
+   -------------------------------------------------------------------------- */
+function initTeamCarousel() {
+  const carousel = document.getElementById('teamCarousel');
+  if (!carousel) return;
+
+  const slides = carousel.querySelectorAll('.team-slide');
+  const indicators = carousel.querySelectorAll('.team-indicator-dot');
+  const prevBtn = document.getElementById('teamCarouselPrev');
+  const nextBtn = document.getElementById('teamCarouselNext');
+  const progressBar = document.getElementById('teamCarouselProgressBar');
+  const legend = document.getElementById('teamImageLegend');
+
+  if (slides.length < 2) return;
+
+  let currentIndex = 0;
+  const slideIntervalMs = 6000;
+  let timer = null;
+  let isPaused = false;
+
+  function updateSlide(index) {
+    currentIndex = (index + slides.length) % slides.length;
+
+    // Update slides visibility
+    slides.forEach((slide, i) => {
+      if (i === currentIndex) {
+        slide.classList.add('active');
+        slide.setAttribute('aria-hidden', 'false');
+      } else {
+        slide.classList.remove('active');
+        slide.setAttribute('aria-hidden', 'true');
+      }
+    });
+
+    // Update indicator dots
+    indicators.forEach((dot, i) => {
+      if (i === currentIndex) {
+        dot.classList.add('active');
+        dot.setAttribute('aria-current', 'true');
+      } else {
+        dot.classList.remove('active');
+        dot.removeAttribute('aria-current');
+      }
+    });
+
+    // Smoothly update caption legend
+    if (legend && slides[currentIndex]) {
+      const newCaption = slides[currentIndex].getAttribute('data-caption');
+      if (newCaption) {
+        legend.style.opacity = '0';
+        setTimeout(() => {
+          legend.textContent = newCaption;
+          legend.style.opacity = '1';
+        }, 220);
+      }
+    }
+
+    // Reset progress animation
+    resetProgressBar();
+  }
+
+  function resetProgressBar() {
+    if (!progressBar) return;
+    progressBar.style.animation = 'none';
+    void progressBar.offsetWidth; // Trigger reflow
+    if (!isPaused) {
+      progressBar.style.animation = `teamProgressAnimation ${slideIntervalMs}ms linear forwards`;
+    }
+  }
+
+  function nextSlide() {
+    updateSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    updateSlide(currentIndex - 1);
+  }
+
+  function startTimer() {
+    stopTimer();
+    isPaused = false;
+    resetProgressBar();
+    timer = setInterval(() => {
+      nextSlide();
+    }, slideIntervalMs);
+  }
+
+  function stopTimer() {
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+    if (progressBar) {
+      progressBar.style.animationPlayState = 'paused';
+    }
+    isPaused = true;
+  }
+
+  // Navigation button controls
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      nextSlide();
+      startTimer();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      prevSlide();
+      startTimer();
+    });
+  }
+
+  // Dot indicators
+  indicators.forEach((dot, idx) => {
+    dot.addEventListener('click', (e) => {
+      e.preventDefault();
+      updateSlide(idx);
+      startTimer();
+    });
+  });
+
+  // Pause on hover
+  carousel.addEventListener('mouseenter', () => {
+    stopTimer();
+  });
+
+  carousel.addEventListener('mouseleave', () => {
+    startTimer();
+  });
+
+  // Touch swipe support for mobile devices
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  carousel.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    stopTimer();
+  }, { passive: true });
+
+  carousel.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    if (touchStartX - touchEndX > 45) {
+      nextSlide();
+    } else if (touchEndX - touchStartX > 45) {
+      prevSlide();
+    }
+    startTimer();
+  }, { passive: true });
+
+  // Initial countdown start
+  startTimer();
+}
+

@@ -810,6 +810,15 @@ p:last-child {
   display: block;
 }
 
+.hero-photo.hero-logo {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: calc(var(--radius-lg) - 6px);
+  filter: contrast(1.05) drop-shadow(0 4px 12px rgba(6, 17, 31, 0.08));
+}
+
 .photo-floating-card {
   position: absolute;
   bottom: -20px;
@@ -880,21 +889,19 @@ p:last-child {
   width: 100%;
   background-color: var(--navy-950);
   overflow: hidden;
-  height: auto;
+  height: 300px;
 }
 
 @media (max-width: 767px) {
   .team-banner-wrapper {
-    height: auto;
-    max-height: 400px;
+    height: 290px;
     background-color: #06111f;
   }
 
   .team-photo-img {
     width: 100%;
-    height: auto;
-    max-height: 380px;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
     display: block;
   }
 
@@ -958,12 +965,174 @@ p:last-child {
 /* CRITICAL CSS: Guaranteed face visibility for professor and all researchers */
 .team-photo-img {
   width: 100%;
+  height: 100%;
   display: block;
   transition: transform var(--transition-smooth);
 }
 
-.team-section-card:hover .team-photo-img {
+.team-section-card:hover .team-slide.active .team-photo-img {
   transform: scale(1.015);
+}
+
+/* ==========================================================================
+   CAROUSEL EQUIPO: SLIDER CON CAMBIO AUTOMÁTICO DE 6 SEGUNDOS
+   ========================================================================== */
+.team-carousel {
+  position: relative;
+  user-select: none;
+}
+
+.team-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+  z-index: 1;
+}
+
+.team-slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+.team-slide .team-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-slide[data-index="0"] .team-photo-img {
+  object-position: center 20%;
+}
+
+.team-slide[data-index="1"] .team-photo-img {
+  object-position: center 28%;
+}
+
+.team-carousel-controls {
+  position: absolute;
+  bottom: 14px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+  background: rgba(6, 17, 31, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.team-carousel-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+  padding: 0;
+}
+
+.team-carousel-btn:hover {
+  background-color: var(--gold-accent);
+  color: var(--navy-950);
+  transform: scale(1.1);
+}
+
+.team-carousel-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.team-carousel-indicators {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 4px;
+}
+
+.team-indicator-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-indicator-dot:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.team-indicator-dot.active {
+  width: 24px;
+  border-radius: 12px;
+  background: var(--gold-accent);
+  box-shadow: 0 0 10px rgba(194, 142, 43, 0.6);
+}
+
+.team-carousel-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  z-index: 10;
+}
+
+.team-carousel-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--gold-light), var(--gold-accent));
+}
+
+@keyframes teamProgressAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-carousel-controls {
+    bottom: 8px;
+    right: 8px;
+    padding: 4px 8px;
+    gap: 6px;
+  }
+  .team-carousel-btn {
+    width: 24px;
+    height: 24px;
+  }
+  .team-carousel-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+  .team-indicator-dot {
+    width: 8px;
+    height: 8px;
+  }
+  .team-indicator-dot.active {
+    width: 18px;
+  }
 }
 
 .team-image-caption-bar {

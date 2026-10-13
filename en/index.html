@@ -210,29 +210,31 @@
           </div>
         </div>
 
-        <!-- Right Column: Profile Photography with Smooth Rounded Corners -->
+        <!-- Right Column: Official Crest / Logo of the Molecular Spectroscopy Lab -->
         <div class="hero-media">
           <div class="photo-card-wrapper">
             <div class="photo-card-frame">
               <img 
-                src="https://dci.ugto.mx/~molspeclab/images/images/LAV-WEB/foto_2.jpg" 
-                alt="Portrait of Dr. Leonardo Álvarez Valtierra" 
-                class="hero-photo"
+                src="../images/logo-laboratorio-espectroscopia.jpg" 
+                alt="Official Crest of the Molecular Spectroscopy Laboratory - University of Guanajuato" 
+                class="hero-photo hero-logo"
                 width="422" 
-                height="393"
+                height="422"
                 loading="eager"
               >
             </div>
 
             <div class="photo-floating-card">
               <div class="floating-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(30 12 12)"></ellipse>
+                  <ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(-30 12 12)"></ellipse>
                 </svg>
               </div>
               <div>
-                <div class="floating-title">Principal Investigator</div>
-                <div class="floating-text">Chemical, Biomedical &amp; Electronics Dept.</div>
+                <div class="floating-title">Molecular Spectroscopy Laboratory</div>
+                <div class="floating-text">Division of Sciences and Engineering · UG</div>
               </div>
             </div>
           </div>
@@ -258,20 +260,50 @@
 
       <div class="team-section-card">
         
-        <!-- Adaptive Photo Container: 100% visible with no overlapping text -->
-        <div class="team-banner-wrapper">
-          <img 
-            src="https://dci.ugto.mx/~molspeclab/images/images/banners/foto-grupo.jpeg" 
-            alt="Research team of the Molecular Spectroscopy Lab led by Dr. Leonardo Álvarez Valtierra" 
-            class="team-photo-img"
-            loading="lazy"
-          >
+        <!-- Adaptive Photo Container: Carousel with 6-second auto alternation -->
+        <div class="team-banner-wrapper team-carousel" id="teamCarousel" aria-label="Research team photographs" role="region">
+          <div class="team-slide active" data-index="0" data-caption="Principal Investigator, Graduate Fellows &amp; Researchers">
+            <img 
+              src="../images/foto-profesores.jpeg" 
+              onerror="this.onerror=null; this.src='https://dci.ugto.mx/~molspeclab/images/images/banners/foto-grupo.jpeg';"
+              alt="Faculty and principal investigators of the Molecular Spectroscopy Laboratory" 
+              class="team-photo-img"
+              loading="lazy"
+            >
+          </div>
+          <div class="team-slide" data-index="1" data-caption="Students and Faculty at the Ultra-High Vacuum Chamber" aria-hidden="true">
+            <img 
+              src="../images/equipo-estudiantes-profesores.jpg" 
+              alt="Students and professors of the Molecular Spectroscopy Laboratory in front of the ultra-high vacuum chamber" 
+              class="team-photo-img"
+              loading="lazy"
+            >
+          </div>
+
+          <!-- Carousel Navigation Controls -->
+          <div class="team-carousel-controls" aria-label="Carousel navigation controls">
+            <button type="button" class="team-carousel-btn" id="teamCarouselPrev" aria-label="Previous photograph">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <div class="team-carousel-indicators" id="teamCarouselIndicators">
+              <button type="button" class="team-indicator-dot active" data-index="0" aria-label="Photograph 1: Faculty and Researchers" aria-current="true"></button>
+              <button type="button" class="team-indicator-dot" data-index="1" aria-label="Photograph 2: Students and Faculty"></button>
+            </div>
+            <button type="button" class="team-carousel-btn" id="teamCarouselNext" aria-label="Next photograph">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+
+          <!-- 6-Second Progress Bar -->
+          <div class="team-carousel-progress" aria-hidden="true">
+            <div class="team-carousel-progress-bar" id="teamCarouselProgressBar"></div>
+          </div>
         </div>
 
         <!-- Distinct Institutional Caption Bar Physically Separated from Image -->
         <div class="team-image-caption-bar">
           <span class="team-image-badge">Molecular Spectroscopy Research Group · UG</span>
-          <span class="team-image-legend">Principal Investigator, Graduate Fellows &amp; Student Researchers</span>
+          <span class="team-image-legend" id="teamImageLegend">Principal Investigator, Graduate Fellows &amp; Researchers</span>
         </div>
 
         <div class="team-narrative-body">
